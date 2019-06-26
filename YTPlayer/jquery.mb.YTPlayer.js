@@ -74,11 +74,11 @@ function onYouTubePlayerAPIReady() {
 			ratio                  : "16/9",
 			showYTLogo             : false,
 			videoURL               : null,
-			startAt                : 0,
+			startAt                : 11,
 			autoplay               : true,
 			vol                    : 100,
 			addRaster              : false,
-			opacity                : 1,
+			opacity                : 0.8,
 			quality                : "default", //or “small”, “medium”, “large”, “hd720”, “hd1080”, “highres”
 			mute                   : false,
 			loop                   : true,
@@ -159,7 +159,7 @@ function onYouTubePlayerAPIReady() {
 
 
 				YTPlayer.opt.showAnnotations = (YTPlayer.opt.showAnnotations) ? '0' : '3';
-				var playerVars = { 'autoplay': 1, 'modestbranding': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi': 1, 'version': 3, 'playerapiid': playerID, 'origin': '*', 'allowfullscreen': true, 'wmode': "transparent", 'iv_load_policy': YTPlayer.opt.showAnnotations};
+				var playerVars = { 'autoPlay': 1, 'modestbranding': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi': 1, 'version': 3, 'playerapiid': playerID, 'origin': '*', 'allowfullscreen': true, 'wmode': "transparent", 'iv_load_policy': YTPlayer.opt.showAnnotations};
 
 				var canPlayHTML5 = false;
 				var v = document.createElement('video');
@@ -434,7 +434,7 @@ function onYouTubePlayerAPIReady() {
 											YTPlayer.opt.mute = false;
 										}
 
-										if (YTPlayer.opt.autoplay && YTPlayer.loop == 0) {
+										if (YTPlayer.opt.autoPlay && YTPlayer.loop == 0) {
 											YTPlayer.wrapper.CSSAnimate({opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity}, 2000);
 										} else if(!YTPlayer.isBackground) {
 											YTPlayer.wrapper.css({opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity});
